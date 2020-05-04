@@ -125,12 +125,6 @@ final class Plugin {
 			}
 		);
 
-		$display_site_kit_meta = function() {
-			printf( '<meta name="generator" content="Site Kit by Google %s" />', esc_attr( GOOGLESITEKIT_VERSION ) );
-		};
-		add_action( 'wp_head', $display_site_kit_meta );
-		add_action( 'login_head', $display_site_kit_meta );
-
 		$options    = new Core\Storage\Options( $this->context );
 		$transients = new Core\Storage\Transients( $this->context );
 		$assets     = new Core\Assets\Assets( $this->context );
